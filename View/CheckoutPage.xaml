@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:CoffeeShopApp.ViewModel"
+             x:Class="CoffeeShopApp.View.CheckoutPage"
+             x:DataType="viewModel:CheckoutPageViewModel"
+             Title="Checkout">
+
+    <VerticalStackLayout>
+        <Label 
+            Text="Checkout"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="Total"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry
+            Placeholder="Name"
+            x:Name="CustomerName"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry
+            Placeholder="PhoneNumber"
+            x:Name="CustomerPhoneNumber"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            Text="Place Order"
+            Command="{Binding PlaceOrderCommand}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>
